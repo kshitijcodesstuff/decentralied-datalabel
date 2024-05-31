@@ -194,7 +194,7 @@ router.get("/nextTask", workerMiddleware, async (req, res) => {
 
 router.post("/signin", async(req, res) => {
     const { publicKey, signature } = req.body;
-    const message = new TextEncoder().encode("Sign into mechanical turks as a worker");
+    const message = new TextEncoder().encode("Sign into TagWizards as a worker");
 
     const result = nacl.sign.detached.verify(
         message,
